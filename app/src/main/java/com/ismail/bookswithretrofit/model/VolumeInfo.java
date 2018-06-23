@@ -1,5 +1,6 @@
 package com.ismail.bookswithretrofit.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class VolumeInfo {
@@ -10,6 +11,17 @@ public class VolumeInfo {
     public String subtitle;
     @SerializedName("description")
     public String description;
+    @SerializedName("imageLinks")
+    @Expose
+    public ImageLinks imageLinks;
+
+    public ImageLinks getImageLinks() {
+        return imageLinks;
+    }
+
+    public void setImageLinks(ImageLinks imageLinks) {
+        this.imageLinks = imageLinks;
+    }
 
     public VolumeInfo(String title, String subtitle, String description) {
         this.title = title;

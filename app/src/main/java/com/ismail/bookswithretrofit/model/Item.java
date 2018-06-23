@@ -1,8 +1,15 @@
 package com.ismail.bookswithretrofit.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Item {
-    public String kind;
-    public VolumeInfo mVolumeInfos;
+    @SerializedName("kind")
+    @Expose
+    private String kind;
+    @SerializedName("volumeInfo")
+    @Expose
+    private VolumeInfo volumeInfo;
 
     public String getKind() {
         return kind;
@@ -13,10 +20,10 @@ public class Item {
     }
 
     public VolumeInfo getVolumeInfos() {
-        return mVolumeInfos;
+        return volumeInfo;
     }
 
     public void setVolumeInfos(VolumeInfo volumeInfos) {
-        mVolumeInfos = volumeInfos;
+        this.volumeInfo = volumeInfos;
     }
 }
